@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
+    <script src="https://kit.fontawesome.com/691ea90499.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section class="w-full h-screen" id="container">
+        <!-- Header Section -->
+        <div class="w-full h-auto py-3 px-20 flex justify-between items-center absolute top-0 left-0">
+            <ul class="basis-1/3 flex items-center space-x-5 text-white font-swap">
+                <li class="text-3xl font-bold text-normalRed cursor-pointer">Movie<span>App</span></li>
+                <li class="cursor-pointer">Home</li>
+                <li class="cursor-pointer">Movies</li>
+                <li class="cursor-pointer">TV shows</li>
+            </ul>
+            <div class="flex space-x-3">
+                <button
+                    class="outline-none py-1 px-2 text-lg rounded-lg bg-superRed text-white cursor-pointer">favorites <i
+                        class="fa-solid fa-heart text-sm ml-2"></i></button>
+                <button
+                    class="outline-none py-1 px-2 text-lg rounded-lg bg-superDark text-white border border-normalGray cursor-pointer">watch
+                    list <i class="fa-solid fa-bookmark text-sm ml-2"></i></button>
+            </div>
+        </div>
+
+        <!-- body section -->
+        <div class="h-full w-full flex justify-start items-center bg-gradient-to-r from-superDark  to-tranparent">
+            <div class="w-1/3 text-left ml-20">
+                <h1 class="text-5xl text-superLightGray mb-5 font-Poppins">Hi👋 Welcome to <span
+                        class="text-normalRed">movieApp.</span>
+                </h1>
+                <p class="text-superLightGray text-lg mb-5">
+                    <span class="font-bold text-3xl">Ngu Helon</span> dolor sit amet consectetur adipisicing elit.
+                    Repellendus deserunt optio eos consequatur
+                    iusto reprehenderit officia, reiciendis porro necessitatibus dolorem enim repellat eligendi
+                    inventore blanditiis tempora eius dolor quia quo modi tenetur nisi culpa sed illo a. Qui obcaecati
+                    alias nulla velit, quasi vitae eaque. Eveniet architecto libero nisi quasi.
+                </p>
+                <div class="flex space-x-3">
+                    <button
+                        class="outline-none py-2 px-4 text-lg rounded-full bg-superDark text-superLightGray border border-superGray">Github
+                        <i class="fa-brands fa-github"></i></button>
+                    <button class="outline-none py-2 px-4 text-lg rounded-full bg-superRed text-superLightGray">Watch
+                        movies</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="w-full py-2 flex justify-center items-center bg-superDark absolute bottom-0 right-0">
+            <div class="flex space-x-1">
+                <p class="text-superLightGray text-xl">powered by </p>
+                <img src="../images/tmdb2.svg" class="h-8 w-8">
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

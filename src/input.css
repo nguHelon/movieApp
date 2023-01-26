@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#container {
+  background-image: url("../images/wednesday.jpg");
+  background-position: center;
+  background-size: cover;
+}
