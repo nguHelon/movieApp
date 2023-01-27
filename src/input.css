@@ -7,3 +7,40 @@
   background-position: center;
   background-size: cover;
 }
+
+#moviesIntro {
+  background-image: url("../images/avatar.jpg");
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background-position: center;
+  background-size: cover;
+}
+
+#topRated::-webkit-scrollbar,
+#Popular::-webkit-scrollbar {
+  height: 5px;
+}
+
+#topRated::-webkit-scrollbar-track,
+#Popular::-webkit-scrollbar-track {
+  background-color: #221f1f;
+}
+
+#topRated::-webkit-scrollbar-thumb,
+#Popular::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: #8a8a8a;
+}
+
+#movieAdvert::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+#movieAdvert::-webkit-scrollbar-track {
+  background-color: #221f1f;
+}
+
+#movieAdvert::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: #8a8a8a;
+}
