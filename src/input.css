@@ -44,3 +44,9 @@
   border-radius: 1rem;
   background-color: #8a8a8a;
 }
+
+#movieInforDiv {
+  background-image: url("../images/pussinboots\ backdrop.jpg");
+  background-position: center;
+  background-size: cover;
+}

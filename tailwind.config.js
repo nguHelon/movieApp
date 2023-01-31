@@ -16,6 +16,7 @@ module.exports = {
       normalGray: '#4f4f4f',
       lightGray: '#8a8a8a',
       superLightGray: '#fafafa',
+      textGray: '#BEBEBE',
       superRed: '#ff0000',
       normalRed: '#B81D24',
       white: '#ffffff',
