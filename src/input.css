@@ -45,6 +45,48 @@
   background-color: #8a8a8a;
 }
 
+#casting::-webkit-scrollbar,
+#recommendations::-webkit-scrollbar {
+  height: 7px;
+}
+
+#casting::-webkit-scrollbar-track,
+#recommendations::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+#casting::-webkit-scrollbar-thumb,
+#recommendations::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: #bebebe;
+}
+
+#watchlist::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+#watchlist::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+#watchlist::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: #8a8a8a;
+}
+
+#searchResult::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+#searchResult::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+#searchResult::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: #8a8a8a;
+}
+
 #movieInforDiv {
   background-image: url("../images/pussinboots\ backdrop.jpg");
   background-position: center;

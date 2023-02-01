@@ -26,14 +26,27 @@
                     <li class="cursor-pointer">Movies</li>
                     <li class="cursor-pointer">TV shows</li>
                 </ul>
-                <div class="basis-2/5">
+                <div class="basis-2/5 relative">
                     <input type="text" placeholder="Search for movie"
                         class="w-full h-10 pl-3 outline-none rounded-full border border-normalGray bg-superDark2 text-superLightGray">
+                    <div class="w-full h-96 mt-2 absolute top-full left-0 bg-superDark rounded-lg overflow-y-scroll"
+                        id="searchResult">
+                        <a href="">
+                            <div
+                                class="w-full h-auto py-2 pl-1 bg-superDark flex justify-start space-x-2 border-b border-normalGray">
+                                <div class="w-20 h-24">
+                                    <img src="../images/pussinboots poster.jpg" class="w-full h-full">
+                                </div>
+                                <div class="">
+                                    <h2 class="text-superLightGray text-2xl leading-5">Puss in boots</h2>
+                                    <span class="text-textGray text-sm">12/12/2022</span>
+                                    <p class="italic text-textGray mb-2">say hola to his little friends</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
                 <div class="flex space-x-3">
-                    <button
-                        class="outline-none py-1 px-2 text-lg rounded-lg bg-superRed text-white cursor-pointer font-Poppins">favorites
-                        <i class="fa-solid fa-heart text-sm ml-2"></i></button>
                     <button
                         class="outline-none py-1 px-2 text-lg rounded-lg bg-superDark text-white border border-normalGray cursor-pointer font-Poppins">watch
                         list <i class="fa-solid fa-bookmark text-sm ml-2"></i></button>
@@ -189,6 +202,38 @@
                 </div>
             </div>
         </section>
+
+        <!-- favorites and watchlist -->
+        <div class="w-full h-screen fixed inset-0 bg-superDark2 hidden justify-center items-center">
+            <div class="w-96 h-3/4 rounded-lg bg-normalDark">
+                <div class="h-1/6 px-3 flex justify-between items-center border-b border-normalGray">
+                    <h1 class="text-3xl text-superLightGray">watchlist</h1>
+                    <i class="fa-solid fa-xmark p-3 rounded-full bg-normalGray border border-superDark text-2xl"></i>
+                </div>
+                <div class="w-full h-5/6 max-h-full overflow-y-scroll" id="watchlist">
+                    <div
+                        class="w-full h-auto py-2 pl-1 bg-superDark flex justify-start space-x-2 border-b border-normalGray">
+                        <a href="">
+                            <div class="w-20 h-full">
+                                <img src="../images/pussinboots poster.jpg" class="">
+                            </div>
+                        </a>
+                        <div class="">
+                            <h2 class="text-superLightGray text-2xl leading-5">Puss in boots</h2>
+                            <span class="text-textGray text-sm">12/12/2022</span>
+                            <p class="italic text-textGray mb-2">say hola to his little friends</p>
+                            <div class="">
+                                <button class="outline-none border-none"><i
+                                        class="fa-solid fa-heart p-2 rounded-full bg-lightGray border border-superLightGray text-xl"></i></button>
+                                <button class="outline-none border-none"><i
+                                        class="fa-solid fa-trash-can p-2 rounded-full bg-lightGray border border-superLightGray text-xl"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 </body>

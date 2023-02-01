@@ -25,7 +25,7 @@
             <li class="cursor-pointer">TV shows</li>
         </ul>
         <div class="basis-2/5 relative">
-            <input type="text" placeholder="Search for movie"
+            <input type="text" placeholder="Search for a TV show"
                 class="w-full h-10 pl-3 outline-none rounded-full border border-normalGray bg-superDark2 text-superLightGray">
             <div class="w-full h-96 mt-2 absolute top-full left-0 bg-superDark rounded-lg overflow-y-scroll"
                 id="searchResult">
@@ -45,7 +45,6 @@
             </div>
         </div>
         <div class="flex space-x-3">
-
             <button
                 class="outline-none py-1 px-2 text-lg rounded-lg bg-superDark text-white border border-normalGray cursor-pointer font-Poppins">watch
                 list <i class="fa-solid fa-bookmark text-sm ml-2"></i></button>
@@ -65,12 +64,7 @@
                                 class="text-normalGray">(2022)</span></h1>
                         <div class="w-full flex justify-start items-center space-x-2 text-textGray">
                             <span class="px-1 border border-normalGray rounded">PG</span>
-                            <span class="">12/21/2022</span>
-                            <span class="">(US)</span>
-                            <span class="h-1 w-1 rounded-full bg-superLightGray"></span>
                             <p class="capitalize">Animation,Action,Adventures,Comedy,Family,Fantasy</p>
-                            <span class="h-1 w-1 rounded-full bg-superLightGray"></span>
-                            <span>1h 43min</span>
                         </div>
                     </div>
                     <div class="flex space-x-3 mb-5">
@@ -96,22 +90,14 @@
                                 debitis?
                             </p>
                         </div>
-                        <div class="w-full flex items-center justify-between flex-wrap">
+                        <div class="w-full flex items-center justify-around flex-wrap">
                             <div>
-                                <h2 class="text-white capitalize">Tommy Swerdlow</h2>
-                                <p class="text-sm text-textGray">Screenplay, Story</p>
+                                <h2 class="text-white capitalize">Esta spalding</h2>
+                                <p class="text-sm text-textGray">creator</p>
                             </div>
                             <div>
-                                <h2 class="text-white capitalize">Tommy Swerdlow</h2>
-                                <p class="text-sm text-textGray">Screenplay, Story</p>
-                            </div>
-                            <div>
-                                <h2 class="text-white capitalize">Tommy Swerdlow</h2>
-                                <p class="text-sm text-textGray">Screenplay, Story</p>
-                            </div>
-                            <div>
-                                <h2 class="text-white capitalize">Tommy Swerdlow</h2>
-                                <p class="text-sm text-textGray">Screenplay, Story</p>
+                                <h2 class="text-white capitalize">Michelle Ashford</h2>
+                                <p class="text-sm text-textGray">creator</p>
                             </div>
                         </div>
                     </div>
@@ -128,16 +114,6 @@
                 <div class="w-full h-auto pb-4 flex space-x-3 overflow-x-scroll" id="casting">
                     <div class="flex-none w-36 rounded-md h-auto border border-textGray">
                         <div class="w-full h-4/6">
-                            <img src="../images/antonio.jpg" class="w-full h-full rounded-t-md">
-                        </div>
-                        <div class="p-1">
-                            <h2 class="text-black font-bold capitalize ">Antonio Banderas</h2>
-                            <p class="text-textGray text-sm">Puss in boots (voice)</p>
-                        </div>
-                    </div>
-
-                    <div class="flex-none w-36 rounded-md h-auto border border-textGray">
-                        <div class="w-full h-4/6">
                             <img src="../images/salma hayek.jpg" class="w-full h-full rounded-t-md">
                         </div>
                         <div class="p-1">
@@ -148,10 +124,36 @@
                 </div>
             </div>
 
+            <!-- current season -->
+            <div class="w-full h-60 my-4">
+                <h1 class="text-black text-3xl mb-4">Current Season</h1>
+                <div class="w-full h-full flex items-center rounded-lg border border-textGray">
+                    <div class="w-1/6 h-full">
+                        <img src="../images/wednesdayPoster.jpg" class="h-full w-full rounded-l-lg">
+                    </div>
+                    <div class="w-10/12 pl-3">
+                        <h2 class="text-black text-2xl font-bold">Season 1</h2>
+                        <p class="text-black mb-2 font-bold"><span>2023</span> | <span>8 episodes</span></p>
+                        <p>Season 1 of Anne Rice's Mayfair Witches premiered on January 8, 2023</p>
+                    </div>
+                </div>
+            </div>
+
             <!-- Recommendations -->
-            <div class="w-full h-auto py-5">
+            <div class="w-full h-auto py-5 mt-20">
                 <h1 class="text-black text-3xl mb-4">Recommendations</h1>
                 <div class="w-full h-auto py-1 flex overflow-x-scroll space-x-3" id="recommedations">
+                    <div class="flex-none w-80 h-60">
+                        <a href="">
+                            <div class="w-full h-4/5">
+                                <img src="../images/avatar.jpg" class="w-full h-full rounded-md">
+                            </div>
+                        </a>
+                        <div>
+                            <h2 class="text-black text-lg">avatar</h2>
+                            <p class="text-normalGray">12/12/2022</p>
+                        </div>
+                    </div>
                     <div class="flex-none w-80 h-60">
                         <a href="">
                             <div class="w-full h-4/5">
@@ -184,19 +186,19 @@
             <div class="">
                 <div class="mb-3">
                     <h2 class="font-bold">Status</h2>
-                    <p class="text-normalGray">Released</p>
+                    <p class="text-normalGray">Returning Series</p>
+                </div>
+                <div class="mb-3">
+                    <h2 class="font-bold">Network</h2>
+                    <img src="../images/amc.svg" class="w-14 h-12">
+                </div>
+                <div class="mb-3">
+                    <h2 class="font-bold">Type</h2>
+                    <p class="text-normalGray">Scripted</p>
                 </div>
                 <div class="mb-3">
                     <h2 class="font-bold">Original Language</h2>
                     <p class="text-normalGray">English</p>
-                </div>
-                <div class="mb-3">
-                    <h2 class="font-bold">Budget</h2>
-                    <p class="text-normalGray">$90,000,000.00</p>
-                </div>
-                <div class="mb-3">
-                    <h2 class="font-bold">Revenue</h2>
-                    <p class="text-normalGray">$279,504,470.00</p>
                 </div>
             </div>
             <div class="">
