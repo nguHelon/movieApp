@@ -605,6 +605,10 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -619,10 +623,6 @@ video {
 
 .mr-3 {
   margin-right: 0.75rem;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
 }
 
 .mt-20 {
@@ -669,6 +669,14 @@ video {
   height: 2.5rem;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
+.h-24 {
+  height: 6rem;
+}
+
 .h-1 {
   height: 0.25rem;
 }
@@ -691,14 +699,6 @@ video {
 
 .h-80 {
   height: 20rem;
-}
-
-.h-96 {
-  height: 24rem;
-}
-
-.h-24 {
-  height: 6rem;
 }
 
 .max-h-full {
@@ -1075,6 +1075,11 @@ video {
   padding-right: 0.25rem;
 }
 
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 .pl-1 {
   padding-left: 0.25rem;
 }
@@ -1085,6 +1090,10 @@ video {
 
 .pb-4 {
   padding-bottom: 1rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
 }
 
 .pl-20 {
@@ -1199,12 +1208,20 @@ video {
 }
 
 #container {
-  background-image: url("../images/wednesday.jpg");
+  /* background-image: url("../images/wednesday.jpg"); */
   background-position: center;
   background-size: cover;
 }
 
-#moviesIntro {
+#movieIntro {
+  background-image: url("../images/avatar.jpg");
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background-position: center;
+  background-size: cover;
+}
+
+#tvshowIntro {
   background-image: url("../images/avatar.jpg");
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
