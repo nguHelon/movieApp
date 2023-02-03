@@ -92,10 +92,12 @@ function setMovieIntroDiv(data) {
                     <button class="outline-none py-2 px-4 text-lg rounded-full bg-superRed text-superLightGray"><i
                             class="fa-solid fa-circle-play mr-3"></i> Watch
                         Trailer</button>
-                    <button
+                    <a href="movieInfor.html?movieId=${data.id}">
+                        <button
                         class="outline-none py-2 px-4 text-lg rounded-full bg-superDark text-superLightGray border border-superGray"><i
                             class="fa-solid fa-circle-info mr-3"></i> More
                         Information</button>
+                    </a>
                 </div>
             </div>
         </div>

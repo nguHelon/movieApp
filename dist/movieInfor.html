@@ -33,7 +33,7 @@
         <div class="basis-2/5 relative">
             <input type="text" placeholder="Search for movie"
                 class="w-full h-10 pl-3 outline-none rounded-full border border-normalGray bg-superDark2 text-superLightGray">
-            <div class="w-full h-96 mt-2 absolute top-full left-0 bg-superDark rounded-lg overflow-y-scroll"
+            <div class="w-full h-96 mt-2 hidden absolute top-full left-0 bg-superDark rounded-lg overflow-y-scroll"
                 id="searchResult">
                 <a href="">
                     <div
@@ -61,7 +61,7 @@
     <!-- Movie infor section -->
     <div class="w-full h-auto" id="movieInforDiv">
         <div class="w-full h-full py-5 px-20 bg-superDark2">
-            <div class="w-full h-full flex justify-center items-center space-x-8">
+            <div class="w-full h-full flex justify-center items-center space-x-8" id="movieInforSection">
                 <div class="basis-1/4 h-full">
                     <img src="../images/pussinboots poster.jpg" class="w-full h-full rounded-lg">
                 </div>
@@ -157,7 +157,7 @@
             <!-- Recommendations -->
             <div class="w-full h-auto py-5">
                 <h1 class="text-black text-3xl mb-4">Recommendations</h1>
-                <div class="w-full h-auto py-1 flex overflow-x-scroll space-x-3" id="recommedations">
+                <div class="w-full h-auto py-1 flex overflow-x-scroll space-x-3" id="recommendations">
                     <div class="flex-none w-80 h-60">
                         <a href="">
                             <div class="w-full h-4/5">
@@ -172,7 +172,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-1/4">
+        <div class="w-1/4" id="movieMoreInfo">
             <div class="flex space-x-4 mb-3">
                 <a href="">
                     <i class="fa-brands fa-square-facebook text-2xl"></i>
@@ -251,6 +251,8 @@
             </div>
         </div>
     </div>
+
+    <script type="module" src="javascript/movieInfor.js"></script>
 </body>
 
 </html>
