@@ -1,5 +1,8 @@
 import { getTvshowDetails } from "./fetchMovieTvDetails.js";
+import { searchtvshow } from "./searchMovieTvshow.js";
 
+const searchResultDiv = document.getElementById("searchResult");
+const searchInput = document.getElementById("searchInput");
 const tvshowInforDiv = document.getElementById("tvshowInforDiv");
 const currentSeason = document.getElementById("currentSeason");
 const tvshowMoreInfo = document.getElementById("tvshowMoreInfo");
@@ -9,6 +12,17 @@ const casting = document.getElementById("casting");
 
 const urlParams = new URLSearchParams(window.location.search);
 const tvshowId = urlParams.get("tvshowId");
+
+//event listeners
+window.addEventListener('click', (event) => {
+    if (event.target.className != "searchResult") {
+        searchResultDiv.classList.add('hidden');
+    }
+})
+
+searchInput.addEventListener("keyup", async () => {
+    await searchtvshow(searchInput.value, searchResultDiv);
+})
 
 async function setMovieDetails(tvshowId) {
     let tvshowDetail = await getTvshowDetails(tvshowId);

@@ -1,5 +1,8 @@
 import { fetchPopularTvShows, fetchTopRatedTvShows } from "./fetchMovieTv.js";
+import { searchtvshow } from "./searchMovieTvshow.js";
 
+const searchResultDiv = document.getElementById("searchResult");
+const searchInput = document.getElementById("searchInput");
 const tvshowIntro = document.getElementById('tvshowIntro');
 const topRated = document.getElementById('topRated');
 const Popular = document.getElementById('Popular');
@@ -7,6 +10,17 @@ const Popular = document.getElementById('Popular');
 window.addEventListener("DOMContentLoaded", () => {
     getTopRated();
     getPopularTvshow();
+})
+
+//event listeners
+window.addEventListener('click', (event) => {
+    if (event.target.className != "searchResult") {
+        searchResultDiv.classList.add('hidden');
+    }
+})
+
+searchInput.addEventListener("keyup", async () => {
+    await searchtvshow(searchInput.value, searchResultDiv);
 })
 
 async function getTopRated() {

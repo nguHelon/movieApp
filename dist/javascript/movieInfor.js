@@ -1,5 +1,8 @@
 import { getMovieDetails } from "./fetchMovieTvDetails.js";
+import { searchMovies } from "./searchMovieTvshow.js";
 
+const searchResultDiv = document.getElementById("searchResult");
+const searchInput = document.getElementById("searchInput");
 const movieInforDiv = document.getElementById("movieInforDiv");
 const movieMoreInfo = document.getElementById("movieMoreInfo");
 const recommendationsDiv = document.getElementById("recommendations");
@@ -8,6 +11,17 @@ const casting = document.getElementById("casting");
 
 const urlParams = new URLSearchParams(window.location.search);
 const movieId = urlParams.get("movieId");
+
+//event listeners
+window.addEventListener('click', (event) => {
+    if (event.target.className != "searchResult") {
+        searchResultDiv.classList.add('hidden');
+    }
+})
+
+searchInput.addEventListener("keyup", async () => {
+    await searchMovies(searchInput.value, searchResultDiv);
+})
 
 async function setMovieDetails(movieId) {
     let movieDetail = await getMovieDetails(movieId);
