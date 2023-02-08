@@ -1,11 +1,15 @@
 import { fetchPopularTvShows, fetchTopRatedTvShows } from "./fetchMovieTv.js";
 import { searchtvshow } from "./searchMovieTvshow.js";
+import { fetchTrailers } from "./trailers.js";
 
 const searchResultDiv = document.getElementById("searchResult");
 const searchInput = document.getElementById("searchInput");
 const tvshowIntro = document.getElementById('tvshowIntro');
 const topRated = document.getElementById('topRated');
 const Popular = document.getElementById('Popular');
+const iframe = document.querySelector(".iframe");
+const closeTrailerBtn = document.getElementById("closeTrailerBtn");
+const trailerDiv = document.getElementById("trailerDiv");
 
 window.addEventListener("DOMContentLoaded", () => {
     getTopRated();
@@ -104,7 +108,7 @@ function setMovieIntroDiv(data) {
                 ${data.overview}
                 </p>
                 <div class="flex space-x-3">
-                    <button class="outline-none py-2 px-4 text-lg rounded-full bg-superRed text-superLightGray"><i
+                    <button class="outline-none py-2 px-4 text-lg rounded-full bg-superRed text-superLightGray trailerBtn"><i
                             class="fa-solid fa-circle-play mr-3"></i> Watch
                         Trailer</button>
                     <a href="tvshowInfor.html?tvshowId=${data.id}">
@@ -120,4 +124,9 @@ function setMovieIntroDiv(data) {
 
     tvshowIntro.innerHTML = content;
     tvshowIntro.style.backgroundImage = `url("https://image.tmdb.org/t/p/original${data.backdrop_path}")`;
+
+    let trailerBtn = tvshowIntro.querySelector(".trailerBtn");
+    trailerBtn.addEventListener("click", async () => {
+        await fetchTrailers(data.id, "tv", iframe, closeTrailerBtn, trailerDiv);
+    })
 }

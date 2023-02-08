@@ -1,5 +1,6 @@
 import { getMovieDetails } from "./fetchMovieTvDetails.js";
 import { searchMovies } from "./searchMovieTvshow.js";
+import { fetchTrailers } from "./trailers.js";
 
 const searchResultDiv = document.getElementById("searchResult");
 const searchInput = document.getElementById("searchInput");
@@ -8,6 +9,10 @@ const movieMoreInfo = document.getElementById("movieMoreInfo");
 const recommendationsDiv = document.getElementById("recommendations");
 const movieInforSection = document.getElementById("movieInforSection");
 const casting = document.getElementById("casting");
+// vars for trailers
+const iframe = document.querySelector(".iframe");
+const closeTrailerBtn = document.getElementById("closeTrailerBtn");
+const trailerDiv = document.getElementById("trailerDiv");
 
 const urlParams = new URLSearchParams(window.location.search);
 const movieId = urlParams.get("movieId");
@@ -45,7 +50,7 @@ async function setMovieDetails(movieId) {
                 </div>
             </div>
             <div class="flex space-x-3 mb-5">
-                <button class="px-4 text-lg text-superLightGray rounded-lg bg-superRed">Play
+                <button class="px-4 text-lg text-superLightGray rounded-lg bg-superRed trailerBtn">Play
                     Trailer</button>
                 <button
                     class="w-12 h-12 flex justify-center items-center rounded-full bg-superDark text-superLightGray"><i
@@ -67,7 +72,11 @@ async function setMovieDetails(movieId) {
     `;
 
     movieInforSection.innerHTML = contents;
-    movieInforDiv.style.backgroundImage = `url("https://image.tmdb.org/t/p/original${movieDetail.backdrop_path}")`
+    movieInforDiv.style.backgroundImage = `url("https://image.tmdb.org/t/p/original${movieDetail.backdrop_path}")`;
+    let trailerBtn = movieInforSection.querySelector(".trailerBtn");
+    trailerBtn.addEventListener("click", async () => {
+        await fetchTrailers(movieId, "movie", iframe, closeTrailerBtn, trailerDiv);
+    })
 }
 
 

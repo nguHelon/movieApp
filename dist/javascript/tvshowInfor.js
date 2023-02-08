@@ -1,5 +1,6 @@
 import { getTvshowDetails } from "./fetchMovieTvDetails.js";
 import { searchtvshow } from "./searchMovieTvshow.js";
+import { fetchTrailers } from "./trailers.js";
 
 const searchResultDiv = document.getElementById("searchResult");
 const searchInput = document.getElementById("searchInput");
@@ -9,6 +10,10 @@ const tvshowMoreInfo = document.getElementById("tvshowMoreInfo");
 const recommendationsDiv = document.getElementById("recommendations");
 const tvshowInforSection = document.getElementById("tvshowInforSection");
 const casting = document.getElementById("casting");
+// vars for trailers
+const iframe = document.querySelector(".iframe");
+const closeTrailerBtn = document.getElementById("closeTrailerBtn");
+const trailerDiv = document.getElementById("trailerDiv");
 
 const urlParams = new URLSearchParams(window.location.search);
 const tvshowId = urlParams.get("tvshowId");
@@ -43,7 +48,7 @@ async function setMovieDetails(tvshowId) {
                 </div>
             </div>
             <div class="flex space-x-3 mb-5">
-                <button class="px-4 text-lg text-superLightGray rounded-lg bg-superRed">Play
+                <button class="px-4 text-lg text-superLightGray rounded-lg bg-superRed trailerBtn">Play
                     Trailer</button>
                 <button
                     class="w-12 h-12 flex justify-center items-center rounded-full bg-superDark text-superLightGray"><i
@@ -66,6 +71,11 @@ async function setMovieDetails(tvshowId) {
 
     tvshowInforSection.innerHTML = contents;
     tvshowInforDiv.style.backgroundImage = `url("https://image.tmdb.org/t/p/original${tvshowDetail.backdrop_path}")`;
+
+    let trailerBtn = tvshowInforSection.querySelector(".trailerBtn");
+    trailerBtn.addEventListener("click", async () => {
+        await fetchTrailers(tvshowId, "tv", iframe, closeTrailerBtn, trailerDiv);
+    })
 }
 
 
