@@ -46,16 +46,20 @@
                         class="text-normalRed">movieApp.</span>
                 </h1>
                 <p class="text-superLightGray text-lg mb-5 font-Poppins">
-                    <span class="font-bold text-3xl">Ngu Helon</span> dolor sit amet consectetur adipisicing elit.
-                    Repellendus deserunt optio eos consequatur
-                    iusto reprehenderit officia, reiciendis porro necessitatibus dolorem enim repellat eligendi
-                    inventore blanditiis tempora eius dolor quia quo modi tenetur nisi culpa sed illo a. Qui obcaecati
-                    alias nulla velit, quasi vitae eaque. Eveniet architecto libero nisi quasi.
+                    Developed by <span class="font-bold text-3xl">Ngu Helon</span>. <span
+                        class="text-normalRed font-bold">MovieApp</span> is a website that has been designed to know
+                    popular recent movies, top rated movies, have information about them, watch trailers, get the
+                    casting and recommended movies or TV shows depending on the particular movie or TV show. It is not
+                    perfect, but does most of the Job. I will require some experiece to make it more User friendly, that
+                    is why <span class="text-normalRed font-bold">MovieApp 2.0</span> will be coming in a few months,
+                    Trust me.
                 </p>
                 <div class="flex space-x-3">
-                    <button
-                        class="outline-none py-2 px-4 text-lg rounded-full bg-superDark text-superLightGray border border-superGray">Github
-                        <i class="fa-brands fa-github"></i></button>
+                    <a href="https://github.com/nguHelon/movieApp">
+                        <button
+                            class="outline-none py-2 px-4 text-lg rounded-full bg-superDark text-superLightGray border border-superGray">Github
+                            <i class="fa-brands fa-github"></i></button>
+                    </a>
                     <a href="movies.html">
                         <button
                             class="outline-none py-2 px-4 text-lg rounded-full bg-superRed text-superLightGray">Watch
@@ -75,7 +79,7 @@
         </div>
 
         <!-- favorites and watchlist -->
-        <div class="w-full h-screen fixed inset-0 bg-superDark2 hidden justify-center items-center">
+        <!-- <div class="w-full h-screen fixed inset-0 bg-superDark2 hidden justify-center items-center">
             <div class="w-96 h-3/4 rounded-lg bg-normalDark">
                 <div class="h-1/6 px-3 flex justify-between items-center border-b border-normalGray">
                     <h1 class="text-3xl text-superLightGray">watchlist</h1>
@@ -104,8 +108,29 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+
     </section>
+    <!-- banned media area -->
+    <div class="w-full h-screen fixed top-0 left-0 bg-black md:hidden">
+        <video class="absolute right-0 bottom-0 video-back -z-10" autoplay muted loop plays-inline>
+            <source src="../video/video.mp4" type="video/mp4">
+        </video>
+        <div class="w-full h-full flex justify-center items-center">
+            <div class="w-80 h-auto p-5 font-Poppins text-center">
+                <h1 class="font-bold text-3xl mb-5 text-superRed">SORRY 🙏 </h1>
+                <p class="text-xl text-textGray mb-5">
+                    Unfortunately, this website is not optimised for mobile view experiece. A more better version of
+                    <span class="text-normalRed font-bold">MovieApp</span> is going to be produced and released in a few
+                    months. Please, you can visis the below project by clicking the button.
+                </p>
+                <a href="https://nguhelon-comfy-store.netlify.app/index.html">
+                    <button class="border-0 outline-none py-2 px-4 bg-comfy rounded-full text-black text-xl">Comfy
+                        Store</button>
+                </a>
+            </div>
+        </div>
+    </div>
 
 
     <script type="module" src="javascript/script.js"></script>

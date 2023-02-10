@@ -20,7 +20,8 @@ module.exports = {
       superRed: '#ff0000',
       normalRed: '#B81D24',
       white: '#ffffff',
-      black: '#000000'
+      black: '#000000',
+      comfy: 'rgb(255, 213, 0)',
     },
     fontFamily: {
       Poppins: ['Poppins', 'sans-serif']
